@@ -1,4 +1,5 @@
-# django Tutorial
+ls -al
+cd# django Tutorial
 
 # Requirement
 * python 3.4.3  
