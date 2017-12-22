@@ -22,12 +22,10 @@ pytz==2017.3
 ├── mybook          #Mybook Sample  
 │   ├── api  
 │   ├── cms  
-│   ├── db.sqlite3  
 │   ├── manage.py  
 │   ├── mybook  
 │   └── static  
 └── mysite          #Django Tutorial (https://docs.djangoproject.com/ja/2.0/intro/)  
-    ├── db.sqlite3  
     ├── manage.py  
     ├── mysite  
     ├── polls  
