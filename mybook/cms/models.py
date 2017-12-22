@@ -1,8 +1,5 @@
 from django.forms import ModelForm
-
 from django.db import models
-#from cms.models import Book, Impression
-
 # Create your models here.
 
 class Book(models.Model):
@@ -20,10 +17,4 @@ class Impression(models.Model):
     comment = models.TextField('コメント', blank=True)
 
     def __str__(self):
-        return seld.comment
-
-class ImpressionForm(ModelForm):
-    """感想のフォーム"""
-    class Meta:
-        model = Impression
-        fields = ('comment', )
+        return self.comment
