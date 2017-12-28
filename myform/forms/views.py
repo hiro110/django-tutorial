@@ -1,12 +1,31 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect, HttpResponse
+from django.views.decorators.http import require_POST
 
 from forms.models import Entry
 from forms.forms import EntryForm
 
 # Create your views here.
-#def index(request):
 def entry(request):
+
+    form = EntryForm(request.POST or None)
+    context = {'form': form,}
+
+    return render(request, 'forms/entry.html', context)
+
+
+def confirm(request):
+    form = EntryForm(request.POST)
+    context = {'form': form,}
+
+    if form.is_valid():
+        return render(request, 'forms/confirm.html', context)
+
+    return render(request, 'forms/entry.html', context)
+
+
+def complete(request):
+
     if request.method == 'POST':
         form = EntryForm(request.POST)
         if form.is_valid():
@@ -16,9 +35,4 @@ def entry(request):
     else:
         form = EntryForm()
     
-    return render(request, 'forms/entry.html', {'form': form})
-
-
-def complete(request):
-
-    return render(request, 'forms/complete.html')
+    return render(request, 'forms/complete.html', {'form': form})
