@@ -33,6 +33,6 @@ pytz==2017.3
 └── mysite          #Django Tutorial (https://docs.djangoproject.com/ja/2.0/intro/)  
     ├── manage.py
     ├── mysite
-    ├── pollsree
+    ├── polls
     └── templates
 ```
