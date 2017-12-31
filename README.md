@@ -17,17 +17,22 @@ pytz==2017.3
 # Directory Tree
 
 ```:
-./  
-├── README.md  
-├── mybook          #Mybook Sample  
-│   ├── api  
-│   ├── cms  
-│   ├── manage.py  
-│   ├── mybook  
-│   └── static  
+.
+├── README.md
+├── mybook          #Mybook Sample
+│   ├── api
+│   ├── cms
+│   ├── manage.py
+│   ├── mybook
+│   └── static
+├── myform          #Original formsapp  
+│   ├── forms
+│   ├── manage.py
+│   ├── myform
+│   └── static
 └── mysite          #Django Tutorial (https://docs.djangoproject.com/ja/2.0/intro/)  
-    ├── manage.py  
-    ├── mysite  
-    ├── polls  
-    └── templates  
+    ├── manage.py
+    ├── mysite
+    ├── pollsree
+    └── templates
 ```
